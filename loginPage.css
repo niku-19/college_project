@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&family=Ubuntu:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 2rem;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box !important;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: "Playfair Display", serif;
+  /* font-family: "Ubuntu", sans-serif; */
+  /* background-image: linear-gradient( 90deg,
+    rgba(60, 0, 255, 0.5),
+    rgba(240, 29, 93, 0.5)
+  ); */
+}
+
+.loginGrid {
+  display: grid;
+  grid-template-columns: 55% 45%;
+  width: 100%;
+  height: 100vh;
+}
+
+.row1 {
+  background: linear-gradient(
+      35deg,
+      rgba(252, 70, 107, 0.2),
+      rgba(63, 94, 251, 0.4)
+    ),
+    url(./images/e367612d7217491316f957fbbd8c07d8.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background-image: linear-gradient(); */
+}
+
+.row2 {
+  padding: 11rem 11rem 0rem 11rem;
+  /* background-image: radial-gradient( rgba(255, 143, 143, 0.233), orange, yellow, green, blue, indigo, violet); */
+  /* background: linear-gradient(35deg,black, #000099, #66c2ff, #ffcccc, #ffeee6); */
+  background-image: linear-gradient(35deg,#88ffffde,#ffacac);
+}
+
+.row2 h1 {
+  font-size: 2rem;
+  margin-left: 1rem;
+  padding-bottom: 2rem;
+  opacity: 0.6;
+}
+
+.row2 h1 hr {
+  width: 30%;
+  margin-bottom: 0.2rem;
+  padding-bottom: 0.2rem;
+  background-color: red;
+}
+
+label {
+  font-weight: bold;
+  font-size: 1rem;
+  opacity: 0.6;
+  margin: 1rem;
+}
+
+input {
+  width: 100%;
+  font-size: 1.9rem;
+  padding-left: 1.2rem;
+  border-radius: 1.8rem;
+  background-color: transparent;
+  opacity: 0.7;
+  border: 0.2rem solid rgba(0, 0, 0, 0.5);
+}
+
+.check_box {
+  width: 10%;
+  padding: 1rem;
+}
+
+.row2 button {
+  margin-top: 2rem;
+  width: 100%;
+  border-radius: 1.8rem;
+  background-color: rgba(231, 85, 117);
+  color: white;
+  font-size: 1.3rem;
+
+}
+
+
+button:hover{
+    background-color: transparent !important;
+    background-image: linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 1),
+      rgba(251, 63, 63, 1)
+    );
+    transition: 0.5s;
+    color: white;
+    transform: scale(0.9);
+
+
+}
+.box ul {
+  display: flex;
+  margin: 0rem 1rem;
+}
+.box ul li {
+  padding: 2rem 2rem 0rem 1rem;
+}
+
+.box h2{
+    padding: 3rem 2rem 0rem 2rem;
+}
+
+.box h3 {
+  margin: 2rem 4rem 0rem 3rem;
+}
+
+li:hover,
+li:focus {
+  filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg)
+    brightness(104%) contrast(97%);
+}
+
+span:hover,
+span:focus {
+  filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg)
+    brightness(104%) contrast(97%);
+}

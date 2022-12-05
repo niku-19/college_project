@@ -1,0 +1,291 @@
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+      integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ=="
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;500&family=Roboto:wght@100;300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="./cart.css" />
+    <title>FoodCart</title>
+  </head>
+  <body class="bg-light">
+    <header>
+      <a href="./index.html" class="logo"
+        ><img src="./images/logo-img.png" alt=""
+      /></a>
+      <span class="brand_name"> <a href="./index.html"> BRUBECK</a>  </span>
+
+      <nav class="navbar">
+        <ul>
+          <li><a class="active" href="./index.html">home</a></li>
+          <li><a href="./index.html">about</a></li>
+          <li><a href="./index.html">menu</a></li>
+          <li><a href="./index.html">popular</a></li>
+          <li><a href="./index.html">gallery</a></li>
+          <li><a href="./index.html">order</a></li>
+        </ul>
+      </nav>
+      <div class="icons">
+        <div class="fas fa-shopping-cart" id="cart-btn"></div>
+      </div>
+      <div id="menu-bar" class="fas fa-hamburger"></div>
+
+
+      <div class="cart-items-container">
+        <div class="cart_items">
+        </div>
+        <a href="./cart.html" class="add_to_cart btn">checkout now</a>
+      </div>
+    </header>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-10 col-11 mx-auto">       
+            <div class="row mt-5 gx-3">
+              <!-- left side div -->
+              <div
+                class="col-md-12 col-lg-8 col-11 mx-auto main_cart mb-lg-0 mb-5 shadow"
+              >
+              <h2 class="py-4 font-weight-bold cartitemsValue">Cart items)</h2>
+              <div class="showItemsOnCheckout">
+                
+              </div>
+              
+            </div>
+
+              <!-- right side div -->
+              <div class="col-md-12 col-lg-4 col-11 mx-auto mt-lg-0 mt-md-5">
+                <div class="right_side p-3 shadow bg-white">
+                  <h2 class="product_name mb-5">The Total Amount Of</h2>
+                  <div class="cartpricediv">
+
+                  </div>
+                  
+                </div>
+                <!-- discount code part -->
+                <div class="discount_code mt-3 shadow">
+                  <div class="card">
+                    <div class="card-body">
+                      <a
+                        class="d-flex justify-content-between"
+                        data-toggle="collapse"
+                        href="#collapseExample"
+                        aria-expanded="false"
+                        aria-controls="collapseExample"
+                      >
+                        Add a discount code (optional)
+                        <span><i class="fas fa-chevron-down pt-1"></i></span>
+                      </a>
+                      <div class="collapse" id="collapseExample">
+                        <div class="mt-3">
+                          <input
+                            type="text"
+                            name=""
+                            id="discount_code1"
+                            class="form-control font-weight-bold"
+                            placeholder="Enter the discount code"
+                          />
+                          <small id="error_trw" class="text-dark mt-3"
+                            >code is Nikhil</small
+                          >
+                        </div>
+                        <button
+                          class="btn btn-primary btn-sm mt-3"
+                          onclick="discount_code()"
+                        >
+                          Apply
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- discount code ends -->
+                <div class="mt-3 shadow p-3 bg-white">
+                  <div class="pt-4">
+                    <h5 class="mb-4">Expected delivery date</h5>
+                    <p>July 27th 2020 - July 29th 2020</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+      <div class="modal_container hidden">
+        <button class="btn--close-modal">&times;</button>
+        <h2 class="modal__header">
+          Just Confirm Your Address <br />
+          And Get Your Food With In <span class="effects">30 Minutes</span>
+        </h2>
+        <form class="modal__form">
+          <label>First Name</label>
+          <input type="text" class="first_name" placeholder="First Name (Required)*" required />
+          <label>Last Name</label>
+          <input type="text" class="second_name" placeholder="Last Name (Required)*" required />
+          <label>Phone number</label>
+          <input type="number" class="phone_number" required />
+          <label>Email</label>
+          <input type="email" class="phone_number email_inp" required />
+          <label>Pincode</label>
+          <input type="number" class="pin_code" required/>
+          <label>State</label>
+          <input type="text" class="inp_state" required />
+          <label>City</label>
+          <input type="text" class="inp_city" required />
+          <label>House NO,Building Name</label>
+          <input type="text" class="house_no" required />
+          <label>road name,Area,Colony</label>
+          <input type="text" class="inp_address" required />
+          <label for="btnss">
+            <button class="checkBtns">Home <span><i class="fas fa-home"></i></span> </button>
+            <button class="checkBtns">work <span><i class="fas fa-building"></i></span> </button>
+          </label>
+          <button class="btn" id="payment_page">Next step &rarr;</button>
+        </form>
+      </div>
+      <div class="overlay hidden"></div>
+      </div>
+    <div class="payment_container hidden">
+      <!-- <button class="btn--close-modal">&times;</button> -->
+      <div class="payment-method">
+        <label for="card" class="method card">
+          <div class="card-logos">
+            <img src="./images/s0f0b5EB.png"/>
+            <img src="./images/x2SzgwCS.png"/>
+          </div>
+   
+          <div class="radio-input">
+            <input id="card" type="radio" name="payment">
+            Pay £340.00 with credit card
+          </div>
+        </label>
+   
+        <label for="paypal" class="method paypal">
+          <img src="./images/oQSC5zlx.png"/>
+          <div class="radio-input">
+            <input id="paypal" type="radio" name="payment">
+            Pay £340.00 with PayPal
+          </div>
+        </label>
+      </div>
+   
+      <div class="input-fields">
+        <div class="column-1">
+          <label for="cardholder">Cardholder's Name</label>
+          <input type="text" id="cardholder" />
+   
+          <div class="small-inputs">
+            <div>
+              <label for="date">Valid thru</label>
+              <input type="text" id="date" placeholder="MM / YY" />
+            </div>
+   
+            <div>
+              <label for="verification">CVV / CVC *</label>
+              <input type="password" id="verification"/>
+            </div>
+          </div>
+   
+        </div>
+        <div class="column-2">
+          <label for="cardnumber">Card Number</label>
+          <input type="password" id="cardnumber"/>
+   
+          <span class="info">* CVV or CVC is the card security code, unique three digits number on the back of your card separate from its number.</span>
+        </div>
+      </div>
+      <br>
+      <br>
+      <div class="place-order">
+        <button id="place-order-btn" class="btn">Place Order</button>
+        <div class="place">
+          <h1 id="submit_btn" class="hide">Click to Place Your Order <br> never forget to check your email <br> have fun ❤️</h1>
+        </div>
+      </div>
+    </div>
+    <div class="overlay hidden"></div>
+  </div>
+   
+      
+
+
+
+
+
+    <div class="footer">
+      <div class="box1-container">
+        <div class="box1">
+          <h3>contact info</h3>
+          <p><i class="fas fa-map-marker-alt"></i> mumbai, indai 400104</p>
+          <p><i class="fas fa-envelope"></i> example@gmail.com</p>
+          <p><i class="fas fa-phone"></i> +123-456-7890</p>
+          <p><i class="fas fa-phone"></i> +111-222-333</p>
+        </div>
+
+        <div class="box1">
+          <h3>branch location</h3>
+          <a href="#">india</a>
+          <a href="#">USA</a>
+          <a href="#">france</a>
+          <a href="#">russia</a>
+        </div>
+
+        <div class="box1">
+          <h3>quick links</h3>
+          <a href="#">home</a>
+          <a href="#">about</a>
+          <a href="#">menu</a>
+          <a href="#">popular</a>
+          <a href="#">gallery</a>
+          <a href="#">order</a>
+        </div>
+
+        <div class="box1">
+          <h3>follow us</h3>
+          <a href="#">instagram</a>
+          <a href="#">facebook</a>
+          <a href="#">twitter</a>
+          <a href="#">linkedin</a>
+        </div>
+      </div>
+
+      <h1 class="credit">
+        create by <a href="#">Niku</a> all rights reserved.
+      </h1>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- Popper.js first, then Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+      integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./cart.js"></script>
+  </body>
+</html>

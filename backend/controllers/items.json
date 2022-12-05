@@ -1,0 +1,30 @@
+[
+    {
+        "id": "01",
+        "itemName": "Veg Biriyani",
+        rate: 200,
+        thumbnail: "",
+        rating: 4.5,
+      },
+      {
+        id: 02,
+        itemName: "rice",
+        rate: 400,
+        thumbnail: "",
+        rating: 3.5,
+      },
+      {
+        id: 03,
+        itemName: "Roti",
+        rate: 500,
+        thumbnail: "",
+        rating: 5,
+      },
+      {
+        id: 04,
+        itemName: "chicken",
+        rate: 800,
+        thumbnail: "",
+        rating: 4.4,
+      }
+]
